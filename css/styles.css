@@ -3,17 +3,20 @@ body {
     color: #333333;
 }
 
-.centre {
+.ss22image {
     display: flex; justify-content: center;
+    position: sticky;
+    top: 0;
 }
 
-ul.topsides, ul.bottom {
+ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-ul.topsides li, ul.bottom li {
+li {
     display: block;
     width: 128px;
     height: 48px;
@@ -21,6 +24,12 @@ ul.topsides li, ul.bottom li {
     padding: 6px;
     margin: 6px;
     font-weight: bold;
+}
+
+li:hover {
+    width: 140px;
+    height: 60px; 
+    margin: 0px;
 }
 
 li.text-dark {
