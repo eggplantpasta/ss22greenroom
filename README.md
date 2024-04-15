@@ -3,9 +3,9 @@
 
 # Development
 
-The site is built using 11ty and published with GitHub pages.
+The site is built using [11ty](https://www.11ty.dev/) and published with GitHub pages.
 
-The site source files are in the `/src` directory and `.eleventy.js` is configured to generate the site into `/docs`. Unlike a normal setup we don't `.gitignore` the generated site directory so when we push changes the source as well as the generated site are sent to GitHub.
+The site source files are in the `/src` directory and `.eleventy.js` is configured to generate the static site into `/docs`. Unlike a normal setup we don't `.gitignore` the generated site directory, so when we push changes, the source, as well as the generated site, are both sent to GitHub.
 
 The repository settings / pages is configured to publish the GitHub Pages site from the main branch from the `/docs` folder.
 
