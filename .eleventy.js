@@ -1,16 +1,19 @@
-const now = String(Date.now())
+const now = String(Date.now());
 
-const htmlmin = require('html-minifier')
+const htmlmin = require('html-minifier');
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addWatchTarget('./tailwind.config.js')
-    eleventyConfig.addWatchTarget('./src/assets/css/tailwind.css')
+    eleventyConfig.addWatchTarget('./tailwind.config.js');
+    eleventyConfig.addWatchTarget('./src/assets/css/tailwind.css');
+
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   
-    eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' })
+    eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' });
   
     eleventyConfig.addShortcode('version', function () {
       return now
-    })
+    });
 
     eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
         if (
@@ -27,12 +30,13 @@ module.exports = function (eleventyConfig) {
         }
     
         return content
-    })
+    });
   
     return {
-        dir: {
-            input: 'src',
-            output: 'docs', // set as docs for github pages publishing
-        },
+      pathPrefix: "/ss22greenroom/",
+      dir: {
+          input: 'src',
+          output: 'docs', // set as docs for github pages publishing
+      },
     };
 };
