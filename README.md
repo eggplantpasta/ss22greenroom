@@ -14,7 +14,7 @@ The publishing workflow is as follows.
 ```sh
 # make changes to site in /src ...
 # generate static site from /src to /docs
-npx @11ty/eleventy
+npm run build
 # commit changes
 git commit -am "Add new pages"
 # publish
